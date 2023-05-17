@@ -3,7 +3,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
 
-import {terser} from 'rollup-plugin-terser'
+import terser from '@rollup/plugin-terser'
 import scss from 'rollup-plugin-scss'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import pack from './package.json' assert {type: 'json'}
@@ -21,7 +21,7 @@ export default [
 
 			terser(),
 		],
-		external: ['react', 'sass'],
+		external: ['react'],
 		output: [
 			{
 				file: pack.main,
@@ -29,6 +29,9 @@ export default [
 				sourcemap: true,
 				name: 'perhamik-react-components',
 				assetFileNames: '[name][extname]',
+				globals: {
+					react: 'React',
+				},
 			},
 		],
 	},
