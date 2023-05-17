@@ -1,10 +1,10 @@
 {
 	"name": "@perhamik/react-components",
 	"publishConfig": {
-		"@perhamik:registry": "https://npm.pkg.github.com"
+		"registry": "https://npm.pkg.github.com"
 	},
 	"type": "module",
-	"version": "0.0.2",
+	"version": "1.0.1",
 	"description": "A simple template for a custom React component library",
 	"scripts": {
 		"clean": "rm -rf dist",
