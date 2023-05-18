@@ -1,3 +1,13 @@
+import {CSSProperties} from 'react'
+
+type Colors = 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info' | 'light' | 'dark'
+
+type ComponentProps = {
+	children: React.ReactNode
+	className?: string
+	style?: CSSProperties
+}
+
 function clearArrayFromUndefines<T>(arr: Array<T | undefined>): Array<T> {
 	return arr.filter((item) => !!item) as Array<T>
 }
@@ -8,7 +18,7 @@ const mergeNumberArrayOrStringArray = (str: Array<number | string | undefined>):
 		.join(' ')
 }
 
-export const mergeWithAdditionalClassName = (
+const mergeWithAdditionalClassName = (
 	srcClass: string,
 	additional: string | undefined | Array<number | string | undefined>,
 ): string => {
@@ -27,7 +37,18 @@ const triplet = (e1: number, e2: number, e3: number) =>
 	keyStr.charAt(((e2 & 15) << 2) | (e3 >> 6)) +
 	keyStr.charAt(e3 & 63)
 
-export const rgbDataURL = (r: number, g: number, b: number) =>
+const rgbDataURL = (r: number, g: number, b: number) =>
 	`data:image/gif;base64,R0lGODlhAQABAPAA${
 		triplet(0, r, g) + triplet(b, 255, 255)
 	}/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`
+
+export type {Colors, ComponentProps}
+
+export {
+	keyStr,
+	clearArrayFromUndefines,
+	mergeNumberArrayOrStringArray,
+	mergeWithAdditionalClassName,
+	triplet,
+	rgbDataURL,
+}

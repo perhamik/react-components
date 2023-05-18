@@ -1,5 +1,5 @@
 import React from 'react'
-import {mergeWithAdditionalClassName, ComponentProps} from '@src/lib'
+import {mergeWithAdditionalClassName, ComponentProps} from '../utils'
 
 export type ListGroupItemProps = ComponentProps & {
 	active?: boolean
@@ -7,7 +7,7 @@ export type ListGroupItemProps = ComponentProps & {
 	disabled?: boolean
 }
 
-const staticClassNames = [
+export const staticClassNames = [
 	'd-flex',
 	'justify-content-between',
 	'align-items-start',

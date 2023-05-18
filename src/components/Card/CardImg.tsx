@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {mergeWithAdditionalClassName} from '@src/lib'
+import {mergeWithAdditionalClassName} from '../utils'
 
 export type CardImgProps = {
 	variant?: 'top' | 'bottom' | string

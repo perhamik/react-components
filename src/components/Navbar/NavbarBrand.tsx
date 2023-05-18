@@ -1,5 +1,5 @@
 import React from 'react'
-import {ComponentProps} from '@src/lib'
+import {ComponentProps} from '../utils'
 
 export type NavbarBrandProps = ComponentProps & {
 	href: {pathname: string}

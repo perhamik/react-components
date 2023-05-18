@@ -1,19 +1,13 @@
 {
 	"name": "@perhamik/react-components",
+	"type": "module",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com"
 	},
-	"version": "2.0.0",
+	"version": "2.0.5",
 	"description": "Custom React Components Lib",
-	"main": "dist/cjs/index.js",
-	"module": "dist/esm/index.js",
+	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"exports": {
-		".": {
-			"import": "./dist/esm/index.js",
-			"require": "./dist/cjs/index.js"
-		}
-	},
 	"files": [
 		"dist"
 	],
@@ -42,12 +36,11 @@
 		"@rollup/plugin-babel": "^6.0.3",
 		"@rollup/plugin-commonjs": "^25.0.0",
 		"@rollup/plugin-node-resolve": "^15.0.2",
-		"@rollup/plugin-terser": "^0.4.2",
+		"@rollup/plugin-terser": "^0.4.3",
 		"@rollup/plugin-typescript": "^11.1.1",
 		"@types/react": "^18.2.6",
 		"eslint": "^8.40.0",
 		"eslint-plugin-react": "^7.32.2",
-		"lint-staged": "^13.2.2",
 		"prettier": "^2.8.8",
 		"react": "^18.2.0",
 		"rollup": "^3.22.0",
@@ -56,20 +49,16 @@
 		"rollup-plugin-postcss": "^4.0.2",
 		"rollup-plugin-preserve-directives": "^0.1.1",
 		"rollup-plugin-scss": "^4.0.0",
-		"rollup-plugin-ts": "^3.2.0",
-		"sass": "^1.62.1",
-		"tslib": "^2.5.0",
-		"typescript": "^5.0.4"
+		"rollup-plugin-ts": "^3.2.0"
 	},
 	"peerDependencies": {
 		"react": "^16.14.0 || ^17.0.0 || ^18.2.0",
-		"react-dom": "^16.14.0 || ^17.0.0 || ^18.2.0"
+		"react-dom": "^16.14.0 || ^17.0.0 || ^18.2.0",
+		"sass": "^1.62.1",
+		"tslib": "^2.5.1",
+		"typescript": "^5.0.4"
 	},
 	"engines": {
 		"node": ">=16.0.0 || >=18.0.0 || >=19.0.0 || >=20.0.0"
-	},
-	"lint-staged": {
-		"*.js": "npm run lint",
-		"*.{js,css,md*}": "npm run format"
 	}
 }

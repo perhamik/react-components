@@ -1,19 +1,11 @@
 import React from 'react'
-import {mergeWithAdditionalClassName, ComponentProps} from '@src/lib'
+import {mergeWithAdditionalClassName, ComponentProps} from './utils'
 
 export type ColProps = ComponentProps & {
 	col?: IntRange<1, 13> | 'auto'
 	'col-sm'?: IntRange<1, 13> | 'auto'
 	'col-md'?: IntRange<1, 13> | 'auto'
 	'col-lg'?: IntRange<1, 13> | 'auto'
-}
-
-export const Row = ({children, className, style}: ComponentProps) => {
-	return (
-		<div className={mergeWithAdditionalClassName('row', className)} style={style}>
-			{children}
-		</div>
-	)
 }
 
 export const Col = ({children, className, style, ...props}: ColProps) => {
@@ -33,3 +25,5 @@ export const Col = ({children, className, style, ...props}: ColProps) => {
 		</div>
 	)
 }
+
+export default Col

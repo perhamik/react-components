@@ -1,10 +1,10 @@
 import React from 'react'
 
-import {ComponentProps} from '@src/lib'
+import {ComponentProps} from '../utils'
 import styles from './List.module.scss'
 import {ListGroupItem} from './ListGroupItem'
 
-const ListGroup = ({children}: ComponentProps) => {
+export const ListGroup = ({children}: ComponentProps) => {
 	return <ul className={`list-group ${styles.list}`}>{children}</ul>
 }
 

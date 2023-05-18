@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {ComponentProps} from '@src/lib'
+import {ComponentProps} from '../utils'
 import styles from './Card.module.scss'
 
 export const CardTitle = ({children}: ComponentProps) => {
