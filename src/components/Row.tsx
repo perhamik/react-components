@@ -1,5 +1,6 @@
 import React from 'react'
-import {mergeWithAdditionalClassName, ComponentProps} from './utils'
+
+import {ComponentProps, mergeWithAdditionalClassName} from './utils'
 
 export const Row = ({children, className, style}: ComponentProps) => {
 	return (

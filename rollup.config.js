@@ -2,20 +2,18 @@
  * NOTE: There is currently an open issue for adding 'use client' directive
  * https://github.com/rollup/rollup/issues/4699
  */
-
-import {fileURLToPath} from 'node:url'
-import {createRequire} from 'node:module'
-
 import alias from '@rollup/plugin-alias'
 import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import terser from '@rollup/plugin-terser'
-import analyze from 'rollup-plugin-analyzer'
-import preserveDirectives from 'rollup-plugin-preserve-directives'
 import typescript from '@rollup/plugin-typescript'
+import {createRequire} from 'node:module'
+import {fileURLToPath} from 'node:url'
+import analyze from 'rollup-plugin-analyzer'
 import dts from 'rollup-plugin-dts'
 import postcss from 'rollup-plugin-postcss'
+import preserveDirectives from 'rollup-plugin-preserve-directives'
 import scss from 'rollup-plugin-scss'
 
 const require = createRequire(import.meta.url)
@@ -50,7 +48,6 @@ const cssOptions = {
 			resolve({code: result.css.toString()})
 		}),
 	minimize: true,
-	modules: true,
 }
 
 const tsConfig = {

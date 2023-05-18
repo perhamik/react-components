@@ -1,5 +1,6 @@
 import React from 'react'
-import {mergeWithAdditionalClassName, ComponentProps} from '../utils'
+
+import {ComponentProps, mergeWithAdditionalClassName} from '../utils'
 
 export type ListGroupItemProps = ComponentProps & {
 	active?: boolean

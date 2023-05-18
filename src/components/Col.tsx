@@ -1,5 +1,6 @@
 import React from 'react'
-import {mergeWithAdditionalClassName, ComponentProps} from './utils'
+
+import {ComponentProps, mergeWithAdditionalClassName} from './utils'
 
 export type ColProps = ComponentProps & {
 	col?: IntRange<1, 13> | 'auto'

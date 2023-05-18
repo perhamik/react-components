@@ -4,7 +4,7 @@
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com"
 	},
-	"version": "2.0.5",
+	"version": "2.0.8",
 	"description": "Custom React Components Lib",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -26,7 +26,8 @@
 	"author": "Denys Yaroshenko (https://github.com/perhamik)",
 	"license": "MIT",
 	"dependencies": {
-		"@babel/runtime": "^7.21.5"
+		"@babel/runtime": "^7.21.5",
+		"bootstrap": "^5.3.0-alpha3"
 	},
 	"devDependencies": {
 		"@babel/plugin-transform-runtime": "^7.21.4",
@@ -38,6 +39,7 @@
 		"@rollup/plugin-node-resolve": "^15.0.2",
 		"@rollup/plugin-terser": "^0.4.3",
 		"@rollup/plugin-typescript": "^11.1.1",
+		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
 		"@types/react": "^18.2.6",
 		"eslint": "^8.40.0",
 		"eslint-plugin-react": "^7.32.2",

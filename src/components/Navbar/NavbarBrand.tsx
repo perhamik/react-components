@@ -1,4 +1,5 @@
 import React from 'react'
+
 import {ComponentProps} from '../utils'
 
 export type NavbarBrandProps = ComponentProps & {

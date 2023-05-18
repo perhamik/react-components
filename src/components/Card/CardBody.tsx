@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {mergeWithAdditionalClassName, ComponentProps} from '../utils'
+import {ComponentProps, mergeWithAdditionalClassName} from '../utils'
 import styles from './Card.module.scss'
 
 export const CardBody = ({children, className, style}: ComponentProps) => {

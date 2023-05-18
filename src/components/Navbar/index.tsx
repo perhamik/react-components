@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {mergeWithAdditionalClassName, ComponentProps} from '../utils'
+import {ComponentProps, mergeWithAdditionalClassName} from '../utils'
 import {NavbarBrand} from './NavbarBrand'
 
 export const Navbar = ({children, className}: ComponentProps) => {
