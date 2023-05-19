@@ -9,6 +9,47 @@
 	--theme-background-header: #212529;
 }
 
+div.card {
+	--bs-card-color: var(--theme-color);
+	--bs-card-bg: var(--theme-background);
+}
+
+ul.list-group {
+	--bs-list-group-color: var(--theme-color);
+	--bs-list-group-bg: var(--theme-background);
+}
+
+.card {
+	width: 100%;
+
+	&-title {
+		color: var(--theme-color, #333);
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	&-text {
+		position: relative;
+		color: var(--theme-color, #333);
+		opacity: 0.85;
+
+		& > span.card-text-content {
+			display: -webkit-box;
+			position: absolute;
+			inset: 0;
+			overflow: hidden;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+		}
+	}
+
+	&-body {
+		grid-template-rows: 1.75rem min-content 1fr;
+		min-height: 160px;
+	}
+}
+
 @import '~bootstrap/scss/mixins/banner';
 
 // scss-docs-start import-stack
