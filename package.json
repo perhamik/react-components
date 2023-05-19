@@ -4,7 +4,7 @@
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com"
 	},
-	"version": "2.1.2",
+	"version": "2.1.4",
 	"description": "Custom React Components Lib",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",

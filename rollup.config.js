@@ -14,7 +14,6 @@ import analyze from 'rollup-plugin-analyzer'
 import dts from 'rollup-plugin-dts'
 import postcss from 'rollup-plugin-postcss'
 import preserveDirectives from 'rollup-plugin-preserve-directives'
-import scss from 'rollup-plugin-scss'
 
 const require = createRequire(import.meta.url)
 const pkg = require('./package.json')
@@ -42,12 +41,9 @@ const outputOptions = {
 }
 
 const cssOptions = {
-	preprocessor: (_, id) =>
-		new Promise((resolve) => {
-			const result = scss.renderSync({file: id})
-			resolve({code: result.css.toString()})
-		}),
+	extensions: ['.scss'],
 	minimize: true,
+	use: ['sass'],
 }
 
 const tsConfig = {
@@ -106,7 +102,7 @@ const config = [
 	},
 	{
 		input: 'dist/types/src/index.d.ts',
-		output: [{file: 'dist/index.d.ts', format: 'umd'}],
+		output: {file: 'dist/index.d.ts', format: 'umd'},
 		plugins: [dts()],
 		external: [/\.scss$/],
 	},
