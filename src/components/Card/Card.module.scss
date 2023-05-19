@@ -4,6 +4,8 @@ div.card {
 }
 
 .card {
+	width: 100%;
+
 	&__title {
 		color: var(--theme-color, #333);
 		white-space: nowrap;
