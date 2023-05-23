@@ -44,6 +44,7 @@ const cssOptions = {
 	extensions: ['.scss'],
 	minimize: true,
 	use: ['sass'],
+	extract: true,
 }
 
 const tsConfig = {
