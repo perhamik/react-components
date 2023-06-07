@@ -1,8 +1,11 @@
 {
 	"name": "@perhamik/react-components",
 	"type": "module",
+	"homepage": "https://github.com/perhamik/react-components",
 	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
+		"access": "public",
+		"allow-same-version": "true",
+		"registry": "https://registry.npmjs.org/"
 	},
 	"version": "2.2.0",
 	"description": "Custom React Components Lib",
