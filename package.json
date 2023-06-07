@@ -7,7 +7,7 @@
 		"allow-same-version": "true",
 		"registry": "https://registry.npmjs.org/"
 	},
-	"version": "2.2.0",
+	"version": "2.2.2",
 	"description": "Custom React Components Lib",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
